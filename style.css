@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+:root {
+    --ff-headline: 'Bebas Neue', cursive;
+    --ff-normal: 'Fira Sans', sans-serif;
+    --mainColor: #AA14F0;
+    --secondColor: #142F43;
+}
+
+.ff-headline {
+    font-family: var(--ff-headline) !important;
+    color: var(--mainColor) !important;
+}
+
+.ff-bold {
+    font-family: var(--ff-headline) !important;
+    color: #151515 !important;
+}
+
+.ff-sub {
+    font-family: var(--ff-headline) !important;
+    color: var(--secondColor) !important;
+}
+
+p {
+    font-family: var(--ff-normal) !important;
+}
+
+button {
+    border: none;
+}
+
+body {
+    background-color: #EEEEEE !important;
+}
