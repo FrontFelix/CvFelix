@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix B</title>
-    <link rel="stylesheet" href="./style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./index.js" defer></script>
 
 </head>
+<div id="lang" class="language-settings block">
+    <div class="buttons flex justify-around pt-80 xl:px-80 flex-col md:flex-row">
+        <button onclick="setLanguage(this)" id="swedish" class="btn-1 px-20 py-4 rounded-xl ">Svenska</button>
+        <button onclick="setLanguage(this)" id="english" class="btn-2 px-20 py-4 rounded-xl ">English</button>
+    </div>
+</div>
+
 <body>
-    <div class="top">
-        
-        <div class="max-width">
-            <h1 class="ff-headline">test</h1>
+    <div id="body" class="mb-10">
+        <navbar>
+            <div class="max-width text-center">
+                <button id="swedish" onclick="setLanguage(this)" class="mr-8 mt-4 text-xl ff-bold">Swedish</button>
+                <button id="english" onclick="setLanguage(this)" class="ml-8 mt-4 text-xl ff-bold cc-headline">English</button>
+            </div>
+        </navbar>
+        <div class="top xl:mb-40 mb-12">
+            <div class="max-width">
+                <div class="flex flex-col xl:flex-row xl:mt-52 mt-16">
+                    <div class="flex-left self-center xl:w-1/2 text-center xl:text-left">
+                        <h1 id="helloTop" class=" ff-headline self-center cc-headline"></h1>
+                        <h1 class="text-2xl ff-sub" id="developer"></h1>
+                        <h1 class="text-2xl ff-sub" id="designer"></h1>
+                        <h1 class="text-2xl ff-sub" id="bot"></h1>
+                        <button id="portfolioBtn" class="mr-4 mt-16 btn-1 px-4 py-2 text-xl rounded">Portfölj</button>
+                        <button id="contactBtn" class="ml-4 mt-16 btn-2 px-4 py-2 text-xl rounded">Kontakt</button>
+                    </div>
+                    <div class=" flex-right self-center xl:w-1/2 self-center"> 
+                        <img class="mt-12 xl:mt-0 w-1/2 block mx-auto" src="./images/felix.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about text-center xl:text-left text-white">
+            <div class="max-width">
+                <h1 id="aboutH1" class="pt-64  xl:pt-80 ff-headline text-white">About me</h1>
+                <p id="aboutP" class="text-2xl"></p>
+            </div>
+        </div>
+        <div class="contact xl:mt-32 xl:pb-32">
+            <h1 id="contactH1" class="ff-headline cc-headline text-center pt-20"></h1>
+            <div class="blobs xl:mx-auto">
+                <a class="blob-1" href=""><img class="mx-auto block" src="./images/blob-1.svg" alt=""></a>
+                <a class="blob-2" href=""><img class="mx-auto block mt-4" src="./images/blob-2.svg" alt=""></a>
+                <a class="blob-3 pb-20" href=""><img class="mx-auto block mt-4" src="./images/blob-3.svg" alt=""></a>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
