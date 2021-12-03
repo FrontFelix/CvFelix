@@ -1,7 +1,7 @@
 # CV_Felix
  
 ## Demo Sida
-Här är min demo sida [Demo Sida](https://frontfelix.github.io/Labb-3/).
+Här är min demo sida [Demo Sida](https://frontfelix.github.io/CvFelix/).
 
 ## Uppgiften
 Uppgiften gick ut på att skapa sig en egen CV sida och sidan skulle vara interaktiv med javascript. Det jag gjorde som var häftigt var att lägga in att man kunde ändra språk på hemsidan och då ändrades innehållet på hemsidan beroende på vilket språk man valde. Sen la jag även till en liten effekt när man startade hemsidan att top innehållet kom inflygandes från botten.
