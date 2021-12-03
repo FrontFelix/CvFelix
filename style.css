@@ -9,6 +9,16 @@
 }
 
 
+body {
+    overflow-x: hidden;
+}
+
+
+#topDiv {
+    transform: translateY(800px);
+    transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 .btn-1 {
     background-color: var(--mainColor);
     color: white !important;
@@ -89,6 +99,16 @@ a:hover, button:hover {
 @media (min-width: 1280px) {
 
 
+    .ff-headline {
+        font-size: 50px;
+        font-family: var(--ff-headline) !important;
+    }
+    .contact {
+        margin-bottom: 200px !important;
+    }
+}
+
+@media (min-width: 1900px) {
     .blobs {
         margin-top: 100px;
         position: relative;
@@ -107,11 +127,4 @@ a:hover, button:hover {
         top: 200px;
     }
 
-    .ff-headline {
-        font-size: 50px;
-        font-family: var(--ff-headline) !important;
-    }
-    .contact {
-        margin-bottom: 200px !important;
-    }
 }

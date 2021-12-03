@@ -22,24 +22,24 @@
 <body>
     <div id="body" class="mb-10">
         <navbar>
-            <div class="max-width text-center">
+            <div id="navbar" class="max-width text-center">
                 <button id="swedish" onclick="setLanguage(this)" class="mr-8 mt-4 text-xl ff-bold">Swedish</button>
                 <button id="english" onclick="setLanguage(this)" class="ml-8 mt-4 text-xl ff-bold cc-headline">English</button>
             </div>
         </navbar>
         <div class="top xl:mb-40 mb-12">
             <div class="max-width">
-                <div class="flex flex-col xl:flex-row xl:mt-52 mt-16">
+                <div id="topDiv" class="flex flex-col xl:flex-row xl:mt-52 mt-16">
                     <div class="flex-left self-center xl:w-1/2 text-center xl:text-left">
                         <h1 id="helloTop" class=" ff-headline self-center cc-headline"></h1>
                         <h1 class="text-2xl ff-sub" id="developer"></h1>
                         <h1 class="text-2xl ff-sub" id="designer"></h1>
                         <h1 class="text-2xl ff-sub" id="bot"></h1>
-                        <button id="portfolioBtn" class="mr-4 mt-16 btn-1 px-4 py-2 text-xl rounded">Portfölj</button>
-                        <button id="contactBtn" class="ml-4 mt-16 btn-2 px-4 py-2 text-xl rounded">Kontakt</button>
+                        <a href="https://devfelix.com/" target="_blank" id="portfolioBtn" class="inline-block mr-4 mt-16 btn-1 px-4 py-2 text-xl rounded">Portfölj</a>
+                        <a href="https://www.linkedin.com/in/felix-bakkum-252b26192/" target="_blank" id="contactBtn" class="ml-4 mt-16 btn-2 px-4 py-2 text-xl rounded">Kontakt</a>
                     </div>
                     <div class=" flex-right self-center xl:w-1/2 self-center"> 
-                        <img class="mt-12 xl:mt-0 w-1/2 block mx-auto" src="./images/felix.png" alt="">
+                        <img id="selfImage" class="mt-12 xl:mt-0 w-1/2 block mx-auto" src="./images/felix.png" alt="">
                     </div>
                 </div>
             </div>
@@ -47,15 +47,15 @@
         <div class="about text-center xl:text-left text-white">
             <div class="max-width">
                 <h1 id="aboutH1" class="pt-64  xl:pt-80 ff-headline text-white">About me</h1>
-                <p id="aboutP" class="text-2xl"></p>
+                <p id="aboutP" class="text-2xl px-2 xl:px-0"></p>
             </div>
         </div>
         <div class="contact xl:mt-32 xl:pb-32">
             <h1 id="contactH1" class="ff-headline cc-headline text-center pt-20"></h1>
             <div class="blobs xl:mx-auto">
-                <a class="blob-1" href=""><img class="mx-auto block" src="./images/blob-1.svg" alt=""></a>
-                <a class="blob-2" href=""><img class="mx-auto block mt-4" src="./images/blob-2.svg" alt=""></a>
-                <a class="blob-3 pb-20" href=""><img class="mx-auto block mt-4" src="./images/blob-3.svg" alt=""></a>
+                <a class="blob-1" href="https://www.linkedin.com/in/felix-bakkum-252b26192/" target="_blank"><img class="mx-auto block" src="./images/blob-1.svg" alt=""></a>
+                <a class="blob-2" href="https://github.com/FrontFelix" target="_blank"><img class="mx-auto block mt-4" src="./images/blob-2.svg" alt=""></a>
+                <a class="blob-3 pb-20" href="https://twitter.com/FrontFelix" target="_blank"><img class="mx-auto block mt-4" src="./images/blob-3.svg" alt=""></a>
             </div>
         </div>
     </div>

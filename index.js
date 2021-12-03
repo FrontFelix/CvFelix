@@ -1,5 +1,17 @@
 
+/**
+ * Sätter användaren språk beroende på vad dem har valt som har sparats i Localstorage
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    setLanguageEng()
+    setLanguageSwe()
+    document.getElementById('topDiv').style.transform = "translateX(0px)"
+}, false);
 
+
+/**
+ * Array av alla H1 / P taggar som behövs uppdateras beroende på vilket språk man har valt
+ */
 let textVar = {
     "helloTop": document.getElementById('helloTop'),
     "developer": document.getElementById('developer'),
@@ -13,13 +25,19 @@ let textVar = {
 }
 
 
-
+/**
+ * Array av Divsen som används i javascripten
+ */
 let divVar = {
     "language": document.getElementById('lang'),
     "body": document.getElementById('body')
 
 }
 
+
+/**
+ * Array av knapparna som ändras beroende på vilket språk man har valt
+ */
 let buttons = {
     "sweBtn": document.getElementById('swedish'),
     "engBtn": document.getElementById('english')
@@ -28,11 +46,19 @@ let buttons = {
 divVar.language.style.display = "block"
 divVar.body.style.display = "none"
 
+
+/**
+ * Om man redan har valt ett språk och det hittas i Localstorage så tas man direkt till sidan, annars börjar man alltid sidan med att välja språk
+ */
 if(localStorage.getItem('language')) {
     divVar.language.style.display = "none"
     divVar.body.style.display = "block"
 }
 
+
+/**
+ * Sätter svenska språket på hemsidan
+ */
 function setLanguageSwe() {
     if(localStorage.getItem('language') === "Swe") {
         textVar.helloTop.innerHTML = "Tja, mitt namn är Felix. Jag är"
@@ -46,6 +72,10 @@ function setLanguageSwe() {
         textVar.aboutP.innerText = "Shoo, mitt namn är Felix kallas även FrontFelix. Jag är en FrontEnd utvecklare. Jag har jobbat med utveckling av hemsidor i 4år vilket har gett mig en bra förståelse hur man ska arbeta med kunder och partners."
     }
 }
+
+/**
+ * Sätter engelska språket på hemsidan
+ */
 function setLanguageEng() {
     if(localStorage.getItem('language') === "Eng") {
         textVar.helloTop.innerHTML = "Hello, my name is Felix. I am"
@@ -60,7 +90,9 @@ function setLanguageEng() {
     }
 }
 
-
+/**
+ * Uppdaterar språket med hjälp utav @setLanguageSwe
+ */
 function UpdateSwedish() {
     localStorage.setItem('language', "Swe")
     divVar.language.style.display = "none"
@@ -68,6 +100,9 @@ function UpdateSwedish() {
     setLanguageSwe()
 }
 
+/**
+ * Uppdaterar språket med hjälp utav @setLanguageEng
+ */
 function UpdateEnglish() {
     localStorage.setItem('language', "Eng")
     divVar.language.style.display = "none"
@@ -75,6 +110,10 @@ function UpdateEnglish() {
     setLanguageEng()
 }
 
+
+/**
+ * Sätter språk med hjälp av knapparnas id beroende på vilken knapp man klickar på
+ */
 function setLanguage(item) {
     let language = item.id
     if(language === "swedish") {
@@ -84,11 +123,3 @@ function setLanguage(item) {
     }
 
 }
-
-function ClearMe() {
-    localStorage.clear()
-}
-
-
-setLanguageEng()
-setLanguageSwe()
